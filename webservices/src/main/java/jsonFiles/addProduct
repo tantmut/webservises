@@ -1,0 +1,9 @@
+{
+	"BrandName": "Nokia",
+	"Features": {
+		"Feature": ["16GB RAM",
+		"1TB Hard Drive"]
+	},
+	"Id": 168,
+	"LaptopName": "Planet"
+}
