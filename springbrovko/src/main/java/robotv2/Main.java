@@ -1,4 +1,4 @@
-package main.java.robot;
+package main.java.robotv2;
 
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -8,22 +8,10 @@ public class Main {
 
         ApplicationContext context = new ClassPathXmlApplicationContext("allbean.xml");
 
-        Model1000 model1000 = (Model1000) context.getBean("t1000");
+        T1000Pool t1000Pool = (T1000Pool) context.getBean("t1000Pool");
 
-        model1000.action();
-        model1000.getInfo();
 
-//        RobotConveyr t1000Conveyor = (RobotConveyr) context.getBean("t1000Conveyor");
-//
-//
-//        Robot robot = t1000Conveyor.createRobot();
-//        Robot robot1 = t1000Conveyor.createRobot();
-//        Robot robot2 = t1000Conveyor.createRobot();
-//
-//        System.out.println("robot "+ robot);
-//        System.out.println("robot1 "+ robot1);
-//        System.out.println("robot2 "+ robot2);
-
+        t1000Pool.actionCollection();
 
      }
 }

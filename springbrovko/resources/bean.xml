@@ -2,11 +2,33 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
-        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+default-lazy-init="true"
+>
 
     <!-- bean definitions here -->
+     <bean id ="baseModel">
+        <constructor-arg ref="sonyHand"  />
+        <constructor-arg ref="sonyHead"  />
+        <constructor-arg ref="sonyLeg"  />
+    </bean>
+    <bean name ="t1000" class="main.java.robotv2.Model1000" parent="baseModel" scope="prototype">
+        <constructor-arg index="3" value="red" type="java.lang.String"/>
+        <constructor-arg index="4" value="19" type="int"/>
+        <constructor-arg index="5" value="true" type="boolean"/>
+<!--        <replaced-method name="action" replacer="replace" />-->
 
-    <bean id ="baseModel"/>
-    <bean name ="t1000" class=""
+    </bean>
+
+<!--    <bean id="replace" class="main.java.robotv2.RelpaceMethod" />-->
+
+
+
+    <bean name="sonyHand" class="main.java.robotv2.SonyHand"/>
+    <bean name="sonyHead" class="main.java.robotv2.SonyHead"/>
+    <bean name="sonyLeg" class="main.java.robotv2.SonyLeg"/>
+    <bean name="toshibaHand" class="main.java.robotv2.ToshibaHand"/>
+    <bean name="toshibaHead" class="main.java.robotv2.ToshibaHead"/>
+    <bean name="toshibaLeg" class="main.java.robotv2.ToshibaLeg"/>
 
 </beans>

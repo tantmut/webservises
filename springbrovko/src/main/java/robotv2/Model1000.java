@@ -1,4 +1,4 @@
-package main.java.robot;
+package main.java.robotv2;
 
 import org.springframework.beans.factory.DisposableBean;
 import org.springframework.beans.factory.InitializingBean;
@@ -10,6 +10,7 @@ public class Model1000 extends BaseModel implements InitializingBean, Disposable
     private boolean sound;
 
     public Model1000() {
+
     }
 
     public Model1000(Hand hand, Head head, Leg leg, String color, int year, boolean sound) {

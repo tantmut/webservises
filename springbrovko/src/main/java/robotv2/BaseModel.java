@@ -1,6 +1,6 @@
-package main.java.robot;
+package main.java.robotv2;
 
-public abstract class BaseModel implements Robot  {
+public abstract class BaseModel implements Robot {
 
     private Hand hand;
     private Head head;

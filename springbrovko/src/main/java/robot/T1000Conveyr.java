@@ -1,4 +1,7 @@
 package main.java.robot;
 
-public class T1000Conveyr {
+public abstract class T1000Conveyr implements RobotConveyr {
+
+    @Override
+    public abstract Robot createRobot();
 }

@@ -1,0 +1,6 @@
+22:22:12,978 DEBUG devpinoyLogger<strong>{1}</strong>:32 - Config file loaded !!!
+22:22:12,981 DEBUG devpinoyLogger<strong>{1}</strong>:37 - OR file loaded !!!
+22:22:13,786 DEBUG devpinoyLogger<strong>{1}</strong>:47 - Chrome launch
+22:22:15,125 DEBUG devpinoyLogger<strong>{1}</strong>:52 - Navigate to :http://www.way2automation.com/angularjs-protractor/banking/#/login
+22:22:16,601 DEBUG devpinoyLogger<strong>{1}</strong>:12 - inside Login Test
+22:22:16,687 DEBUG devpinoyLogger<strong>{1}</strong>:64 - Succesfully execute  Test

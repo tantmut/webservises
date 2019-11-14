@@ -1,4 +1,10 @@
 package main.java.robotv2;
 
-public class RobotPool {
+import java.util.Collection;
+import java.util.Map;
+
+public interface RobotPool {
+
+    Collection<Robot> getRobotCollection();
+    Map<Integer, Robot> getRobotMap();
 }

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd"
+>
+
+   <import resource="bean.xml"/>
+<!--    <bean id="t1000Conveyor" class="main.java.robot.T1000Conveyr">-->
+<!--        <lookup-method name="createRobot" bean="t1000"/>-->
+<!--    </bean>-->
+
+    <bean id="t1000Pool" class="main.java.robotv2.T1000Pool">
+        <property name="robotCollection">
+            <list>
+                <bean class="main.java.robotv2.Model1000"    parent="baseModel" scope="prototype"/>
+                  <bean class="main.java.robotv2.Model1000" parent="baseModel" scope="prototype">
+                    <constructor-arg value="gold" index="3" type="java.lang.String"/>
+                    <constructor-arg value="2007" index="4" type="int"/>
+                    <constructor-arg value="true" index="5" type="boolean"/>
+
+                </bean>
+            </list>
+        </property>
+    </bean>
+
+    <bean id="t1000PoolMap" class="main.java.robotv2.T1000Pool">
+        <constructor-arg name="robotMap">
+            <map>
+                <entry key="2007" value-ref="t1000"/>
+                <entry key="2006" value-ref="t1000"/>
+                <entry key="2008" value-ref="t1000"/>
+            </map>
+        </constructor-arg>
+
+    </bean>
+
+
+</beans>

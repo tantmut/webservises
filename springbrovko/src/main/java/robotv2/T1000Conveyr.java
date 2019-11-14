@@ -1,4 +1,4 @@
-package main.java.robot;
+package main.java.robotv2;
 
 public abstract class T1000Conveyr implements RobotConveyr {
 

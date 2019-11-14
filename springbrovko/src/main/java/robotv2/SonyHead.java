@@ -1,4 +1,4 @@
-package main.java.robot;
+package main.java.robotv2;
 
 public class SonyHead implements Head {
     @Override

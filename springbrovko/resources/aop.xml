@@ -7,14 +7,18 @@
 		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
 
-	<context:component-scan base-package="ru.javabegin.training.*"/>
+	<context:component-scan base-package="main.java.aop"/>
 
 	<aop:config>
 		<aop:aspect id="log" ref="myLogger">
-			<aop:pointcut id="getValue" expression="execution(* ru.javabegin.training.spring.aop.objects.SomeService.*(..))" />
+
+			<aop:pointcut id="getValue" expression="execution(* main.java.aop.Service.*(..))" />
 			<aop:before pointcut-ref="getValue" method="init" />
 			<aop:after pointcut-ref="getValue" method="close" />
 			<aop:after-returning pointcut-ref="getValue" returning="obj" method="printValue" />
+			<aop:after-throwing pointcut-ref="getValue"
+								throwing="e"
+								method="inCaseOfExceptionThrowAdvice"/>
 		</aop:aspect>
 	</aop:config>
 
